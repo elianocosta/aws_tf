@@ -55,22 +55,5 @@ resource "aws_instance" "app_server" {
     Name = "clickServer"
   }
   security_groups = ["${aws_security_group.click-server.name}"]
-  connection {
-    type     = "ssh"
-    user     = "ubuntu"   
-    timeout = "5"
-    host     = self.public_ip
-  }
-  provisioner "file" {
-    source      = "script.sh"
-    destination = "/tmp/script.sh"
-  }
-
-  provisioner "remote-exec" {
-    inline = [
-      "chmod +x /tmp/script.sh",
-      "/tmp/script.sh",
-    ]
-  }
 }
 
