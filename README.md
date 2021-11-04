@@ -101,4 +101,5 @@ resource "aws_route_table_association" "Public_association" {
 Links:
 https://docs.aws.amazon.com/vpc/index.html
 https://docs.aws.amazon.com/vpc/latest/userguide/vpc-subnets-commands-example.html#vpc-subnets-commands-example-create-vpc
+https://www.jlcp.com.br/criando-rede-vpc-na-aws-com-terraform/
 ```
