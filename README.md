@@ -1,4 +1,5 @@
 # Documentação AWS com Terraform
+url de teste: http://ec2-54-149-42-74.us-west-2.compute.amazonaws.com/
 ```
 01- TOPOLOGIA
 ```
@@ -104,4 +105,5 @@ http://ec2-34-222-67-192.us-west-2.compute.amazonaws.com/
 Links Úteis:
 https://docs.aws.amazon.com/vpc/index.html
 https://docs.aws.amazon.com/vpc/latest/userguide/vpc-subnets-commands-example.html#vpc-subnets-commands-example-create-vpc
+https://www.jlcp.com.br/criando-rede-vpc-na-aws-com-terraform/
 ```
