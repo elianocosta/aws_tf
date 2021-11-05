@@ -98,7 +98,10 @@ resource "aws_route_table_association" "Public_association" {
 }
 ```
 ```
-Links:
+link para acesso ao nginx:
+http://ec2-34-222-67-192.us-west-2.compute.amazonaws.com/
+
+Links Úteis:
 https://docs.aws.amazon.com/vpc/index.html
 https://docs.aws.amazon.com/vpc/latest/userguide/vpc-subnets-commands-example.html#vpc-subnets-commands-example-create-vpc
 ```

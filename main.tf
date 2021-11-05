@@ -14,8 +14,8 @@ provider "aws" {
   region  = "us-west-2"
 }
 
-resource "aws_key_pair" "local" {  
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDFNv8g5f0rxIFndtPRF8ZKfwA7X3pJhtkPxJpeYwtm+9A6WmERjdvDq2VKo3iLL9BS5ga0MkS+YzLirDhG4wV/pEIekZkJhxWmXTjnI6zlS6GQcONTC5EOSM8wlyr5/U3bmPaHoPdJxyOQYFVrZcLnmDeFQfKcz0iGnIRAcCWfhNTwvqMltJD9JUafkHnle4YH+aXAU6oKUvlMNFS7BUijx88ssUJT4vkpsEqg5KYSNdW+616OXaXLoQIltbaRb5wIfVOXA7NL3lfY00+mvjkaSR9QyYc3IJ4iwvunAN9kUWS1b1/pprsjzKcx+l2WuDqzH/R+v1hEd+gbrp00gKwe+NzbtAzDZlUML0HyU9jsgPraaRg9G55GQbq6hK+bytZ5zRlLwDt0FLfjdVDAB1QTxwnuvBYz6FvBXvkbvP16zbG6gze+YluOV+sMAdeRSRNq7sLzulxb9dTHqVzbyMjS/G+z8T/L4MHBq2DNys87wJPs4CSkMM+Di8P9ndWxb0cyJpghoz6IHjaccadI6UpVTrfRZB24Nkf2Y82+kk4lbkSF9zuKPTEloNXddEaxEdfMP0DlGuplsH4wtq2QvfkozrH7+Vt9aofThWpip5xl0Go/bE6cxtbw3xJj/Ix89RMEtZQLgdehM3mRFFJcsiQiI71+o/pNRgsIjUWfUyuO1w== eliano@DESKTOP-IMI4ATT"
+resource "aws_key_pair" "local" {    
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD54ZijkcXcDo+AarBhkJ3IUafyhU+v4htp4WeQPMQy8HfzRoHXBNSqLV039Hf8vlemhNCkrOBHrdFOjjRPG6g5vNpRv5NYtRuY8NYOPSJTh/1lI+FvwlhIlQfzZGl+SA+AK6W5tK/cQR/goq9es9eL604OTyL43wbaMmVx73+PKtH2YMeh9f/Hr0sVJKC6SQpfYW7suv+2oA24tcArMjDlOwB8+gftQ76DrZ99ZAwy/Blc5CbLGvAXI0ZPTVkkR7t/Z6/KR78LAb0dHatzz95MH2omK/TukYk7d+mlzA/FPPEi/jMufgI2QOPoIKm0KTvBxi1HANVmijtw7etdqJ0L eliano@astin-1877429"
 }
 resource "aws_security_group" "click-server" {
 
@@ -57,7 +57,8 @@ resource "aws_instance" "app_server" {
   security_groups = ["${aws_security_group.click-server.name}"]
   connection {
     type     = "ssh"
-    user     = "ubuntu"   
+    user     = "ubuntu"  
+    agent    = false     
     timeout = "5"
     host     = self.public_ip
   }
