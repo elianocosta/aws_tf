@@ -1,5 +1,5 @@
 # Documentação AWS com Terraform
-url de teste: http://ec2-34-219-90-82.us-west-2.compute.amazonaws.com/
+url de teste: http://ec2-34-219-130-111.us-west-2.compute.amazonaws.com/
 ```
 01- TOPOLOGIA
 ```
